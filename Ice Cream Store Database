@@ -1,0 +1,28 @@
+#Project: Design a store database
+
+CREATE TABLE ice_cream_store (id INTEGER PRIMARY KEY, flavor TEXT, color TEXT, quantity INTEGER, price INTEGER);
+
+INSERT INTO ice_cream_store VALUES (1, "strawberry", "red", 3, 5);
+INSERT INTO ice_cream_store VALUES (2, "lime", "green", 5, 5);
+INSERT INTO ice_cream_store VALUES (3, "blueberry", "blue", 8, 3);
+INSERT INTO ice_cream_store VALUES (4, "grape", "purple", 4, 3);
+INSERT INTO ice_cream_store VALUES (5, "cherry", "red", 5, 3);
+INSERT INTO ice_cream_store VALUES (6, "chocolate", "brown", 8, 3);
+INSERT INTO ice_cream_store VALUES (7, "vanilla", "white", 6, 3);
+INSERT INTO ice_cream_store VALUES (8, "passion fruit", "yellow", 4, 5);
+INSERT INTO ice_cream_store VALUES (9, "lemon curd", "yellow", 5, 5);
+INSERT INTO ice_cream_store VALUES (10, "orange", "orange", 2, 3);
+INSERT INTO ice_cream_store VALUES (11, "apple", "green", 3, 3);
+INSERT INTO ice_cream_store VALUES (12, "watermelon", "red", 6, 5);
+INSERT INTO ice_cream_store VALUES (13, "coconut", "white", 4, 5);
+INSERT INTO ice_cream_store VALUES (14, "guava", "orange", 3, 5);
+INSERT INTO ice_cream_store VALUES (15, "banana", "yellow", 8, 3);
+
+--Display the database ordered by price
+SELECT price FROM ice_cream_store ORDER BY price;
+
+--What flavors of ice cream are over $5?
+SELECT flavor, price
+FROM ice_cream_store
+WHERE price >=5
+ORDER BY flavor;
