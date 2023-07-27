@@ -1,4 +1,5 @@
 #Project: Design a store database
+--Created a table of different ice cream flavors, their corresponding colors, quantity of pints available and their prices
 
 CREATE TABLE ice_cream_store (id INTEGER PRIMARY KEY, flavor TEXT, color TEXT, quantity INTEGER, price INTEGER);
 
@@ -26,3 +27,10 @@ SELECT flavor, price
 FROM ice_cream_store
 WHERE price >=5
 ORDER BY flavor;
+
+--How many flavors are there of each color?
+SELECT color, COUNT(color)
+AS quantity_of_flavors
+FROM ice_cream_store
+GROUP BY color
+ORDER BY quantity_of_flavors desc;
